@@ -257,23 +257,6 @@ def openfile(caption, filter=None, multi=False, folder=False):
                 return forfile
     return f
 
-'''
-Custom addition from original software.
-Decorator for choosing directory
-'''
-def chooseDirectory():
-    def f(func):
-        @wraps(func)
-        def decorator(self):
-            #parent = nullptr, const QString &caption = QString(), const QString &dir = QString(), const QString &filter = QString(), QString *selectedFilter = nullptr, QFileDialog::Options options = Options()
-            path = QtWidgets.QFileDialog.getExistingDirectory(
-            caption="Choose Directory")
-            if len(path) > 0:
-                return func(self, path)
-        return decorator
-    return f
-
-
 def savefile(caption, filter, name=""):
     if isinstance(caption, types.FunctionType):
         raise TypeError()
@@ -417,8 +400,6 @@ class Window(QtWidgets.QMainWindow, OrbitoolUi.Ui_MainWindow):
         self.spectrum1ExportPushButton.clicked.connect(self.qSpectrum1Export)
         self.denoiseExportPushButton.clicked.connect(
             self.qSpectrum1NoiseExport)
-        self.spectrum1ExportAllPushButton.clicked.connect(
-            self.qSpectrum1ExportAll)
         self.spectrum1DenoisedExportAllPushButton.clicked.connect(
             self.qSpectrum1DenoisedExportAll)
         self.spectrum1DenoisedExportPushButton.clicked.connect(
@@ -1623,7 +1604,7 @@ class Window(QtWidgets.QMainWindow, OrbitoolUi.Ui_MainWindow):
     '''
     @threadBegin
     @withoutArgs
-    @chooseDirectory()
+    @openfile('Select a folder to save', folder=True)
     def qSpectrum1DenoisedExportAll(self, dir):
         if self.workspace.spectra1Operators is None:
             raise ValueError('There is no file loaded')
@@ -1634,25 +1615,6 @@ class Window(QtWidgets.QMainWindow, OrbitoolUi.Ui_MainWindow):
             path = dir + os.path.sep + file
             denoisedSpectrum = self.qSpectra1Process(i)
             OrbitoolExport.exportSpectrum(path, denoisedSpectrum)
-
-    '''
-    Custom addition from original software.
-    Export original spectra function for all the spectra.
-    '''
-    @threadBegin
-    @withoutArgs
-    @chooseDirectory()
-    def qSpectrum1ExportAll(self, dir):
-        if self.workspace.spectra1Operators is None:
-            raise ValueError('There is no file loaded')
-        operators = self.workspace.spectra1Operators
-        for i in range(len(operators)):
-            file = str(operators[i].shownTime)
-            file = file.replace(':','-')[2:21]
-            path = dir + os.path.sep + file
-            operator = operators[i]
-            spectrum = operator(self.fileList)
-            OrbitoolExport.exportSpectrum(path, spectrum)
 
     @threadBegin
     @withoutArgs

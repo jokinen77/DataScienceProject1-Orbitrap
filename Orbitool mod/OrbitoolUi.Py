@@ -427,15 +427,6 @@ class Ui_MainWindow(object):
         self.spectrum1ExportPushButton.setObjectName("spectrum1ExportPushButton")
         self.horizontalLayout_20.addWidget(self.spectrum1ExportPushButton)
 
-        self.spectrum1ExportAllPushButton = QtWidgets.QPushButton(self.layoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.spectrum1ExportAllPushButton.sizePolicy().hasHeightForWidth())
-        self.spectrum1ExportAllPushButton.setSizePolicy(sizePolicy)
-        self.spectrum1ExportAllPushButton.setObjectName("spectrum1ExportAllPushButton")
-        self.horizontalLayout_20.addWidget(self.spectrum1ExportAllPushButton)
-
         self.spectrum1DenoisedExportAllPushButton = QtWidgets.QPushButton(self.layoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -2240,7 +2231,6 @@ class Ui_MainWindow(object):
         self.spectra1ContinuePushButton.setText(_translate("MainWindow", "Continue without denoising"))
         self.label_24.setText(_translate("MainWindow", "Export"))
         self.spectrum1ExportPushButton.setText(_translate("MainWindow", "original spectrum"))
-        self.spectrum1ExportAllPushButton.setText(_translate("MainWindow", "all original"))
         self.spectrum1DenoisedExportAllPushButton.setText(_translate("MainWindow", "all denoised"))
         self.spectrum1DenoisedExportPushButton.setText(_translate("MainWindow", "denoised spectrum"))
         self.spectrum1LogScaleCheckBox.setText(_translate("MainWindow", "y-log scale"))
