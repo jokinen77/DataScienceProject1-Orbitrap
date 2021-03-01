@@ -6,7 +6,7 @@ dependencies:
   - ca-certificates=2021.1.19
   - certifi=2020.12.5
   - freetype=2.10.4
-  - icc_rt=2019.0.0
+#  - icc_rt=2019.0.0
   - icu=58.2
   - intel-openmp=2020.2
   - jpeg=9b
@@ -37,10 +37,10 @@ dependencies:
   - sqlite=3.33.0
   - tk=8.6.10
   - tornado=6.1
-  - vc=14.2
-  - vs2015_runtime=14.27.29016
+#  - vc=14.2
+#  - vs2015_runtime=14.27.29016
   - wheel=0.36.2
-  - wincertstore=0.2
+ # - wincertstore=0.2
   - xz=5.2.5
   - zlib=1.2.11
   - zstd=1.4.5

@@ -6,3 +6,5 @@ slides and references
 data science project.zip
 .ipynb_checkpoints
 test*
+*.csv
+data
