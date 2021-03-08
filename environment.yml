@@ -1,12 +1,15 @@
 name: orbitool
 channels:
+  - duartexyz
   - defaults
 dependencies:
   - blas=1.0
   - ca-certificates=2021.1.19
   - certifi=2020.12.5
+  - cycler=0.10.0
+  - detecta=0.0.5
   - freetype=2.10.4
-#  - icc_rt=2019.0.0
+  - icc_rt=2019.0.0
   - icu=58.2
   - intel-openmp=2020.2
   - jpeg=9b
@@ -21,7 +24,8 @@ dependencies:
   - mkl_random=1.1.1
   - numpy-base=1.19.2
   - olefile=0.46
-  - openssl=1.1.1i
+  - openssl=1.1.1j
+  - pandas=1.1.5
   - pillow=8.1.0
   - pip=20.3.3
   - pyparsing=2.4.7
@@ -37,22 +41,20 @@ dependencies:
   - sqlite=3.33.0
   - tk=8.6.10
   - tornado=6.1
-#  - vc=14.2
-#  - vs2015_runtime=14.27.29016
+  - vc=14.2
+  - vs2015_runtime=14.27.29016
   - wheel=0.36.2
- # - wincertstore=0.2
+  - wincertstore=0.2
   - xz=5.2.5
   - zlib=1.2.11
   - zstd=1.4.5
   - pip:
-    - cycler==0.10.0
     - cython==0.29.21
     - joblib==1.0.0
     - llvmlite==0.35.0
     - matplotlib==3.3.4
     - numba==0.52.0
     - numpy==1.19.5
-    - pandas==1.1.5
     - patsy==0.5.1
     - psutil==5.8.0
     - pycparser==2.20
