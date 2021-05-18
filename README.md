@@ -9,3 +9,18 @@ The directory is organized as follows:
 - **KOionfolder:** sample data for the DataAnlaysis notebook
 - **Orbitool mod:** contains the modifications done to the Orbitool to add the batch export of denoised spectra
 - **peaklists:** automatically generated peaklists available to be loaded for testing
+
+## Detailed explanation of the notebooks
+
+### Comparison File
+Contains a couple of experiments with different models and parameters for the training peaks, along with the computed results in graph form.
+
+### Data Analysis
+Contains most if not all the research done on peak fitting and the various correlations.
+
+### Data Processing
+Contains the work done on peak fitting, peak selection and models, as long with some tests.
+It doesn't have extensive documentation, rather contains most of the fucntional code.
+
+### DataScienceProject1
+It is the document that tries to be comprehensive of all the work. It is well documented for the initial part of the project, but it isn't as extensive for the last stages.
