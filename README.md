@@ -6,7 +6,7 @@ The directory is organized as follows:
 - **Jupyter notebooks:** our workspace were most of the code and explanation are
 - **functions folder:** comprehensive folder of all the code used in a clean and organized way
 - **Example inputs:** data for running example code
-- **KOionfolder:** sample data for the DataAnlaysis notebook
+- **KOionfolder:** sample data for the DataAnalysis notebook
 - **Orbitool mod:** contains the modifications done to the Orbitool to add the batch export of denoised spectra
 - **peaklists:** automatically generated peaklists available to be loaded for testing
 
