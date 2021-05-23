@@ -4,6 +4,11 @@ from scipy.optimize import curve_fit
 from functions.peakselection import * 
 import matplotlib.pyplot as plt
 
+####################################################
+# Contains functions for fitting polynomial models #
+####################################################
+
+
 # Polynomial fit using one selection method, returns parameters for the model and the error
 # 
 # pl is a pandas data frame containing identified peakselection

@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
 
+#########################################
+# Contains functions for peak selection #
+#########################################
+
 # Choose n peaks with the smallest error
 def selectPeaksMinimumError(peaks, n):
 	errors = abs(peaks.iloc[:,1]-peaks.iloc[:,2])
